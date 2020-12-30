@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NotesDZ.EditPage">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <Editor x:Name="TextBox" AbsoluteLayout.LayoutFlags="All" 
+                    AbsoluteLayout.LayoutBounds="0, 0, 1, 1" 
+                    BackgroundColor="White"
+                    Completed="TextBox_Completed"
+                    Placeholder="Здесь печатать заметку"/>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

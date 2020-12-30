@@ -1,0 +1,15 @@
+C:\Users\kmdho\source\repos\NotesDZ\NotesDZ\NotesDZ\bin\Debug\netstandard2.0\NotesDZ.deps.json
+C:\Users\kmdho\source\repos\NotesDZ\NotesDZ\NotesDZ\bin\Debug\netstandard2.0\NotesDZ.dll
+C:\Users\kmdho\source\repos\NotesDZ\NotesDZ\NotesDZ\bin\Debug\netstandard2.0\ref\NotesDZ.dll
+C:\Users\kmdho\source\repos\NotesDZ\NotesDZ\NotesDZ\bin\Debug\netstandard2.0\NotesDZ.pdb
+C:\Users\kmdho\source\repos\NotesDZ\NotesDZ\NotesDZ\obj\Debug\netstandard2.0\NotesDZ.csprojAssemblyReference.cache
+C:\Users\kmdho\source\repos\NotesDZ\NotesDZ\NotesDZ\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\kmdho\source\repos\NotesDZ\NotesDZ\NotesDZ\obj\Debug\netstandard2.0\EditPage.xaml.g.cs
+C:\Users\kmdho\source\repos\NotesDZ\NotesDZ\NotesDZ\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\kmdho\source\repos\NotesDZ\NotesDZ\NotesDZ\obj\Debug\netstandard2.0\NotesDZ.AssemblyInfoInputs.cache
+C:\Users\kmdho\source\repos\NotesDZ\NotesDZ\NotesDZ\obj\Debug\netstandard2.0\NotesDZ.AssemblyInfo.cs
+C:\Users\kmdho\source\repos\NotesDZ\NotesDZ\NotesDZ\obj\Debug\netstandard2.0\NotesDZ.csproj.CoreCompileInputs.cache
+C:\Users\kmdho\source\repos\NotesDZ\NotesDZ\NotesDZ\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\kmdho\source\repos\NotesDZ\NotesDZ\NotesDZ\obj\Debug\netstandard2.0\NotesDZ.dll
+C:\Users\kmdho\source\repos\NotesDZ\NotesDZ\NotesDZ\obj\Debug\netstandard2.0\ref\NotesDZ.dll
+C:\Users\kmdho\source\repos\NotesDZ\NotesDZ\NotesDZ\obj\Debug\netstandard2.0\NotesDZ.pdb

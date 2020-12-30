@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NotesDZ.MainPage">
+
+    <StackLayout Background="#bbbbbb" x:Name="MainStack">
+        <ScrollView>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <StackLayout x:Name="Col1" Grid.Column="0" VerticalOptions="Start">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Frame AutomationId="{Binding Id}" Padding="3">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                            Tapped="TapGestureRecognizer_Tapped"/>
+                                        <PanGestureRecognizer
+                                            PanUpdated="PanGestureRecognizer_PanUpdatedLeft"/>
+                                    </Frame.GestureRecognizers>
+                                    <StackLayout>
+                                        <Label Text="{Binding Text}"
+                                               FontAttributes="Bold"
+                                               FontSize="16"
+                                               LineBreakMode="WordWrap"/>
+                                        <Label Text="{Binding Date}"
+                                               Opacity="0.85"
+                                               LineBreakMode="WordWrap"/>
+                                    </StackLayout>
+                            </Frame>
+                            </StackLayout>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+                <StackLayout x:Name="Col2" Grid.Column="1" VerticalOptions="Start">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Frame AutomationId="{Binding Id}" Padding="3">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                            Tapped="TapGestureRecognizer_Tapped"/>
+                                        <PanGestureRecognizer
+                                            PanUpdated="PanGestureRecognizer_PanUpdatedRight"/>
+                                    </Frame.GestureRecognizers>
+                                    <StackLayout>
+                                        <Label Text="{Binding Text}"
+                                               FontAttributes="Bold"
+                                               FontSize="16"
+                                               LineBreakMode="WordWrap"/>
+                                        <Label Text="{Binding Date}"
+                                               Opacity="0.85"
+                                               LineBreakMode="WordWrap"/>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+
+            </Grid>
+        </ScrollView>
+        <Button Text="Add"
+                HorizontalOptions="EndAndExpand" 
+                VerticalOptions="EndAndExpand"
+                WidthRequest="80" 
+                CornerRadius="100"
+                HeightRequest="80"
+                Margin="15" 
+                Clicked="Button_Clicked"
+                BackgroundColor="White"/>
+    </StackLayout>
+
+</ContentPage>
