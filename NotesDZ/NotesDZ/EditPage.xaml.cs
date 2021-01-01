@@ -17,6 +17,7 @@ namespace NotesDZ
         static public List<Notes> pool = new List<Notes>();
         static public double l1 = 0, l2 = 0;
         static public int currentId = 0;
+        static public bool flag = true;
     }
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -55,5 +56,6 @@ namespace NotesDZ
 
             }
         }
+
     }
 }

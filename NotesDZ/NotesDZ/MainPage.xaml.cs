@@ -100,20 +100,21 @@ namespace NotesDZ
         {
 
             var thisFrame = sender as Frame;
-            bool flag = true;
 
             switch (e.StatusType)
             {
                 case GestureStatus.Running:
                     {
-                        thisFrame.TranslationX = -Math.Abs(e.TotalX);
-                        //thisFrame.TranslationX = Math.Min(0, e.TotalX * 1.2);
+                        //thisFrame.TranslationX = -Math.Abs(e.TotalX);
+                        thisFrame.TranslationX = Math.Min(0, e.TotalX * 2);
                         //Math.Max(Math.Min(0, e.TotalX), -Math.Abs(Content.Width - 700));
-                        if (Math.Abs(thisFrame.TranslationX / (MainStack.Width / 6)) > 0.8)
-                        {                         
-                            if (flag && await DisplayAlert("Delete", "Are you sure?", "Yes", "Cancel"))
+                        if (Instance.flag && Math.Abs(thisFrame.TranslationX / (MainStack.Width / 6)) > 0.4)
+                        {
+                            Instance.flag = false;
+
+                            if (await DisplayAlert("Delete", "Are you sure?", "Yes", "Cancel"))
                             {
-                                flag = false;
+                                
                                 Instance.pool.Remove(Instance.pool.Find(x => x.Id == int.Parse(thisFrame.AutomationId)));
 
                                 //ребилд сцены
@@ -135,28 +136,26 @@ namespace NotesDZ
                                         Instance.l2 += Instance.pool[i].numLines + 2;
                                     }
                                 }
+
+                                Instance.flag = true;
                             }
                             else
                             {
                                 thisFrame.TranslationX = 0;
-                                flag = false;
+                                Instance.flag = true;
                             }
-                        }
-                        else
-                        {
-                            thisFrame.TranslationX = 0;
                         }
 
                         break;
                     }
 
 
-                    /*case GestureStatus.Completed:
+                    case GestureStatus.Completed:
                     {
+                        thisFrame.TranslationX = 0;
 
-                        
                         break;
-                    }*/
+                    }
             }
 
 
@@ -166,20 +165,20 @@ namespace NotesDZ
         {
 
             var thisFrame = sender as Frame;
-            bool flag = true;
 
             switch (e.StatusType)
             {
                 case GestureStatus.Running:
                     {
-                        thisFrame.TranslationX = Math.Abs(e.TotalX);
-                        //thisFrame.TranslationX = Math.Max(0, e.TotalX * 1.2);
+                        //thisFrame.TranslationX = Math.Abs(e.TotalX);
+                        thisFrame.TranslationX = Math.Max(0, e.TotalX * 2);
                         //Math.Max(Math.Min(0, e.TotalX), -Math.Abs(Content.Width - 700));
-                        if (Math.Abs(thisFrame.TranslationX / (MainStack.Width / 6)) > 0.8)
-                        {                        
-                            if (flag && await DisplayAlert("Delete", "Are you sure?", "Yes", "Cancel"))
+                        if (Instance.flag && Math.Abs(thisFrame.TranslationX / (MainStack.Width / 6)) > 0.4)
+                        {
+                            Instance.flag = false;
+
+                            if (await DisplayAlert("Delete", "Are you sure?", "Yes", "Cancel"))
                             {
-                                flag = false;
                                 Instance.pool.Remove(Instance.pool.Find(x => x.Id == int.Parse(thisFrame.AutomationId)));
 
                                 //ребилд сцены
@@ -201,28 +200,26 @@ namespace NotesDZ
                                         Instance.l2 += Instance.pool[i].numLines + 2;
                                     }
                                 }
+
+                                Instance.flag = true;
                             }
                             else
                             {
                                 thisFrame.TranslationX = 0;
-                                flag = false;
+                                Instance.flag = true;
                             }
-                        }
-                        else
-                        {
-                            thisFrame.TranslationX = 0;
                         }
 
                         break;
                     }
 
 
-                    /*case GestureStatus.Completed:
+                    case GestureStatus.Completed:
                     {
+                        thisFrame.TranslationX = 0;
 
-                        
                         break;
-                    }*/
+                    }
             }
         }
     }
