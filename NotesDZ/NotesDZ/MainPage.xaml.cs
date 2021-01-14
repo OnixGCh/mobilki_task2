@@ -44,23 +44,7 @@ namespace NotesDZ
 
                 //ребилд сцены
 
-                Instance.l1 = 0;
-                Instance.l2 = 0;
-                Instance.marks1.Clear();
-                Instance.marks2.Clear();
-                for (int i = 0; i < Instance.pool.Count; i++)
-                {
-                    if (Instance.l1 <= Instance.l2)
-                    {
-                        Instance.marks1.Add(Instance.pool[i]);
-                        Instance.l1 += Instance.pool[i].numLines + 2;
-                    }
-                    else
-                    {
-                        Instance.marks2.Add(Instance.pool[i]);
-                        Instance.l2 += Instance.pool[i].numLines + 2;
-                    }
-                }
+                rebuild();
             };
         }
 
@@ -76,26 +60,30 @@ namespace NotesDZ
             {
                 //ребилд сцены
 
-                Instance.l1 = 0;
-                Instance.l2 = 0;
-                Instance.marks1.Clear();
-                Instance.marks2.Clear();
-                for (int i = 0; i < Instance.pool.Count; i++)
-                {
-                    if (Instance.l1 <= Instance.l2)
-                    {
-                        Instance.marks1.Add(Instance.pool[i]);
-                        Instance.l1 += Instance.pool[i].numLines + 2;
-                    }
-                    else
-                    {
-                        Instance.marks2.Add(Instance.pool[i]);
-                        Instance.l2 += Instance.pool[i].numLines + 2;
-                    }
-                }
+                rebuild();
             };
         }
 
+        private void rebuild()
+        {
+            Instance.l1 = 0;
+            Instance.l2 = 0;
+            Instance.marks1.Clear();
+            Instance.marks2.Clear();
+            for (int i = 0; i < Instance.pool.Count; i++)
+            {
+                if (Instance.l1 <= Instance.l2)
+                {
+                    Instance.marks1.Add(Instance.pool[i]);
+                    Instance.l1 += Instance.pool[i].numLines + 2;
+                }
+                else
+                {
+                    Instance.marks2.Add(Instance.pool[i]);
+                    Instance.l2 += Instance.pool[i].numLines + 2;
+                }
+            }
+        }
         private async void PanGestureRecognizer_PanUpdatedLeft(object sender, PanUpdatedEventArgs e)
         {
 
@@ -119,23 +107,7 @@ namespace NotesDZ
 
                                 //ребилд сцены
 
-                                Instance.l1 = 0;
-                                Instance.l2 = 0;
-                                Instance.marks1.Clear();
-                                Instance.marks2.Clear();
-                                for (int i = 0; i < Instance.pool.Count; i++)
-                                {
-                                    if (Instance.l1 <= Instance.l2)
-                                    {
-                                        Instance.marks1.Add(Instance.pool[i]);
-                                        Instance.l1 += Instance.pool[i].numLines + 2;
-                                    }
-                                    else
-                                    {
-                                        Instance.marks2.Add(Instance.pool[i]);
-                                        Instance.l2 += Instance.pool[i].numLines + 2;
-                                    }
-                                }
+                                rebuild();
 
                                 Instance.flag = true;
                             }
@@ -183,23 +155,7 @@ namespace NotesDZ
 
                                 //ребилд сцены
 
-                                Instance.l1 = 0;
-                                Instance.l2 = 0;
-                                Instance.marks1.Clear();
-                                Instance.marks2.Clear();
-                                for (int i = 0; i < Instance.pool.Count; i++)
-                                {
-                                    if (Instance.l1 <= Instance.l2)
-                                    {
-                                        Instance.marks1.Add(Instance.pool[i]);
-                                        Instance.l1 += Instance.pool[i].numLines + 2;
-                                    }
-                                    else
-                                    {
-                                        Instance.marks2.Add(Instance.pool[i]);
-                                        Instance.l2 += Instance.pool[i].numLines + 2;
-                                    }
-                                }
+                                rebuild();
 
                                 Instance.flag = true;
                             }
